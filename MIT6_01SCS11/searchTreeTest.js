@@ -1,4 +1,4 @@
-var stateMachineSearch = require('./search-trees/search.js')();
+var stateMachineSearch = require('./search-trees/state-machine-search.js');
 var numberTest1 =  require('./stateMachine/numberTest.js')();
 
 

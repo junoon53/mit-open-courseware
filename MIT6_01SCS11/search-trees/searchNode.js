@@ -1,5 +1,5 @@
 
-function SearchNode(action,state,parent){
+function SearchNode(action,state,parent, actionCost){
 
 	var self = this;
 
@@ -7,6 +7,10 @@ function SearchNode(action,state,parent){
         self.action = action;
         self.state = state;
         self.parent = parent;
+        if(self.parent)
+            self.cost = self.parent.cost + actionCost;
+        else 
+            self.cost = actionCost;
     };
     
     this._init_(action,state,parent);
